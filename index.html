@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>African Culinary Treasures: 5 Iconic Cameroonian Recipes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header & Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-tag">Traditional Heritage Cookbook</div>
+      <h1 class="hero-title">African Culinary Treasures</h1>
+      <p class="hero-subtitle">5 Masterpieces of Cameroonian Gastronomy: Eru, Ekwang, Koki, O'kok &amp; Ndolé</p>
+      
+      <div class="hero-actions">
+        <a href="#recipes-section" class="btn btn-primary">Explore Recipes</a>
+        <button id="git-cheat-btn" class="btn btn-secondary">Git Bash CLI Guide</button>
+        <button id="print-book-btn" class="btn btn-outline">Print Cookbook</button>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="quick-stats">
+        <div class="stat-pill"><span class="stat-num">5</span> Iconic Dishes</div>
+        <div class="stat-pill"><span class="stat-num">100%</span> Authentic Heritage</div>
+        <div class="stat-pill"><span class="stat-num">4</span> Cultural Regions</div>
+        <div class="stat-pill"><span class="stat-num">CLI</span> Git Bash Ready</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation / Filter Bar -->
+  <nav class="sticky-nav" id="recipes-section">
+    <div class="container nav-container">
+      <div class="filter-tabs" id="recipe-tabs">
+        <button class="tab-btn active" data-filter="all">All Recipes</button>
+        <button class="tab-btn" data-filter="eru">🌿 Eru</button>
+        <button class="tab-btn" data-filter="ekwang">🍠 Ekwang</button>
+        <button class="tab-btn" data-filter="koki">🫘 Koki</button>
+        <button class="tab-btn" data-filter="okok">🍃 O'kok</button>
+        <button class="tab-btn" data-filter="ndole">👑 Ndolé</button>
+      </div>
+      
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="recipe-search" placeholder="Search by ingredient, spice or region...">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="container main-content">
+
+    <!-- Recipe 1: Eru -->
+    <article class="recipe-card" id="recipe-eru" data-dish="eru" data-ingredients="eru gnetum waterleaf spinach beef canda kpomo smoked fish crayfish palm oil scotch bonnet">
+      <div class="card-header">
+        <div class="dish-badge">South West Region (Manyu) • Bayangi Heritage</div>
+        <h2 class="dish-title">🌿 Eru (Wild Spinach &amp; Waterleaf Stew)</h2>
+        <p class="dish-desc">A legendary forest delicacy marrying dark, fibrous shredded climbing vines (<em>Gnetum africanum</em>) with tender, succulent waterleaf, slow-cooked beef, gelatinous canda, smoked fish, and a golden red palm oil emulsion.</p>
+        
+        <div class="meta-strip">
+          <div class="meta-item"><span class="meta-label">Difficulty:</span> <span class="meta-val">Medium</span></div>
+          <div class="meta-item"><span class="meta-label">Prep Time:</span> <span class="meta-val">45 mins</span></div>
+          <div class="meta-item"><span class="meta-label">Cook Time:</span> <span class="meta-val">1h 15m</span></div>
+          <div class="meta-item"><span class="meta-label">Primary Pairing:</span> <span class="meta-val">Water Fufu or Garri</span></div>
+        </div>
+
+        <div class="portion-calculator">
+          <label>Adjust Servings:</label>
+          <div class="servings-control">
+            <button class="serv-btn minus" data-target="eru">-</button>
+            <span class="serv-count" id="serv-count-eru" data-base="6">6</span>
+            <button class="serv-btn plus" data-target="eru">+</button>
+          </div>
+          <span class="portion-hint">(Ingredients automatically scale!)</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="recipe-split">
+          <!-- Ingredients Column -->
+          <div class="col-ingredients">
+            <h3 class="col-title">🛒 Ingredients (Interactive Checklist)</h3>
+            <ul class="ingredient-list" id="ing-list-eru">
+              <li><label><input type="checkbox"> <span class="qty" data-base="500">500</span>g Stewing beef or goat meat, cubed</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="300">300</span>g Canda / Kpomo (cow skin), diced</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="250">250</span>g Smoked catfish or cod, washed &amp; deboned</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="100">100</span>g Dried ground crayfish</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="400">400</span>g Shredded Eru leaves (<em>Gnetum africanum</em>)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="800">800</span>g Fresh Waterleaf or baby spinach, chopped</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="300">300</span>ml Pure unrefined Red Palm Oil (Zomi)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="3">3</span> Scotch bonnet peppers, crushed</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="3">3</span> Bouillon cubes (Maggi) &amp; 1 tsp Salt</label></li>
+            </ul>
+          </div>
+
+          <!-- Instructions Column -->
+          <div class="col-steps">
+            <h3 class="col-title">👨‍🍳 Step-by-Step Cooking Guide</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Tenderize the Meats:</strong> Simmer diced beef and canda with 1 bouillon cube, salt, and 300ml water for 40 minutes until tender and liquid is reduced.
+                <button class="timer-btn" data-time="2400">⏱ 40 Min Meat Timer</button>
+              </li>
+              <li>
+                <strong>Add Smoked Fish &amp; Waterleaf:</strong> Fold in flaked smoked fish and half the crayfish. Layer chopped waterleaf on top. Cover without adding water—the leaves release plenty of natural moisture.
+              </li>
+              <li>
+                <strong>Incorporate Eru Leaves:</strong> Add the shredded Eru over the wilting waterleaf. Simmer uncovered on medium-low for 10 minutes until Eru softens.
+              </li>
+              <li>
+                <strong>The Golden Palm Oil Finish:</strong> Pour red palm oil generously over the greens. Add remaining crayfish and scotch bonnet. Simmer on low heat for 15 minutes until excess moisture evaporates and glossy oil crowns the edges.
+                <button class="timer-btn" data-time="900">⏱ 15 Min Simmer Timer</button>
+              </li>
+            </ol>
+
+            <div class="pro-tip-box">
+              <span class="pro-tip-badge">💡 Chef's Golden Rule</span>
+              <p>Always maintain a <strong>2:1 ratio of waterleaf to Eru</strong>. The abundant moisture of the waterleaf tenderizes the wild forest leaves so you never end up with dry or crunchy Eru.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Recipe 2: Ekwang -->
+    <article class="recipe-card" id="recipe-ekwang" data-dish="ekwang" data-ingredients="cocoyam taro macabo cocoyam leaves collards smoked fish canda kpomo crayfish palm oil country onion pebe scotch bonnet">
+      <div class="card-header">
+        <div class="dish-badge">South West &amp; Littoral • Bakweri &amp; Bafaw Tradition</div>
+        <h2 class="dish-title">🍠 Ekwang (Grated Cocoyam Parcels in Palm Oil Gravy)</h2>
+        <p class="dish-desc">A communal masterpiece of freshly grated red cocoyams wrapped by hand into tender leaves, then slow-simmered in an intoxicating bath of country onions, toasted pèbè (wild nutmeg), smoked seafood, and virgin palm oil.</p>
+        
+        <div class="meta-strip">
+          <div class="meta-item"><span class="meta-label">Difficulty:</span> <span class="meta-val">Advanced</span></div>
+          <div class="meta-item"><span class="meta-label">Prep Time:</span> <span class="meta-val">1h 30m</span></div>
+          <div class="meta-item"><span class="meta-label">Cook Time:</span> <span class="meta-val">1h 00m</span></div>
+          <div class="meta-item"><span class="meta-label">Tradition:</span> <span class="meta-val">Never stir with a spoon!</span></div>
+        </div>
+
+        <div class="portion-calculator">
+          <label>Adjust Servings:</label>
+          <div class="servings-control">
+            <button class="serv-btn minus" data-target="ekwang">-</button>
+            <span class="serv-count" id="serv-count-ekwang" data-base="6">6</span>
+            <button class="serv-btn plus" data-target="ekwang">+</button>
+          </div>
+          <span class="portion-hint">(Ingredients automatically scale!)</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="recipe-split">
+          <div class="col-ingredients">
+            <h3 class="col-title">🛒 Ingredients (Interactive Checklist)</h3>
+            <ul class="ingredient-list" id="ing-list-ekwang">
+              <li><label><input type="checkbox"> <span class="qty" data-base="1500">1500</span>g Red Cocoyams (Macabo Rouge/Taro), grated</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="1000">1000</span>g Young cocoyam leaves, collard greens, or romaine</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="400">400</span>g Boiled canda (cow skin), cut into strips</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="300">300</span>g Smoked catfish, flaked &amp; deboned</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="150">150</span>g Dried ground crayfish</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="2">2</span> Country onions (Afrostyrax), ground</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="3">3</span> Pèbè seeds (African wild nutmeg), toasted &amp; ground</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="300">300</span>ml Unrefined Red Palm Oil</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="800">800</span>ml Warm stock or water</label></li>
+            </ul>
+          </div>
+
+          <div class="col-steps">
+            <h3 class="col-title">👨‍🍳 Step-by-Step Cooking Guide</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Grate &amp; Season Cocoyam:</strong> Finely grate the cocoyam until viscous. Season with 1 tsp salt. Blanch leaf wrappers in warm water for 2 minutes to make pliable.
+              </li>
+              <li>
+                <strong>Roll the Parcels:</strong> Place a leaf flat, add a tablespoon of cocoyam paste, and roll tightly into a slender finger-shaped cylinder.
+              </li>
+              <li>
+                <strong>Layer the Pot:</strong> Oil the bottom of a heavy pot, add canda and fish bones to shield the base, then pack rolls tightly in concentric circles with crayfish and smoked fish between layers.
+              </li>
+              <li>
+                <strong>Simmer Without Stirring:</strong> Whisk warm stock with ground country onion, pèbè, and pepper. Pour gently down the sides of the pot. Drizzle palm oil over the top. Simmer covered on low heat for 50-60 minutes.
+                <button class="timer-btn" data-time="3300">⏱ 55 Min Simmer Timer</button>
+              </li>
+            </ol>
+
+            <div class="pro-tip-box">
+              <span class="pro-tip-badge">⚠️ Cardinal Rule</span>
+              <p><strong>NEVER STIR EKWANG WITH A SPOON!</strong> Stirring crushes the parcels into a gummy mash. Only gently swirl or shake the pot by its handles every 15 minutes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Recipe 3: Koki -->
+    <article class="recipe-card" id="recipe-koki" data-dish="koki" data-ingredients="black eyed peas koki cowpeas palm oil banana leaves scotch bonnet">
+      <div class="card-header">
+        <div class="dish-badge">West &amp; Littoral • Bamiléké &amp; Bassa Heritage</div>
+        <h2 class="dish-title">🫘 Koki (Steamed Golden Black-Eyed Pea Pudding)</h2>
+        <p class="dish-desc">A magnificent golden-orange savory steamed pudding. Peeled black-eyed cowpeas are beaten to incorporate airy lightness, blended with warm red palm oil into a vibrant emulsion, wrapped in charred banana leaves and slow-steamed.</p>
+        
+        <div class="meta-strip">
+          <div class="meta-item"><span class="meta-label">Difficulty:</span> <span class="meta-val">Medium</span></div>
+          <div class="meta-item"><span class="meta-label">Prep Time:</span> <span class="meta-val">1 hour</span></div>
+          <div class="meta-item"><span class="meta-label">Steam Time:</span> <span class="meta-val">2h 30m</span></div>
+          <div class="meta-item"><span class="meta-label">Pairing:</span> <span class="meta-val">Steamed Ripe Plantains or Bobolo</span></div>
+        </div>
+
+        <div class="portion-calculator">
+          <label>Adjust Servings:</label>
+          <div class="servings-control">
+            <button class="serv-btn minus" data-target="koki">-</button>
+            <span class="serv-count" id="serv-count-koki" data-base="6">6</span>
+            <button class="serv-btn plus" data-target="koki">+</button>
+          </div>
+          <span class="portion-hint">(Ingredients automatically scale!)</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="recipe-split">
+          <div class="col-ingredients">
+            <h3 class="col-title">🛒 Ingredients (Interactive Checklist)</h3>
+            <ul class="ingredient-list" id="ing-list-koki">
+              <li><label><input type="checkbox"> <span class="qty" data-base="500">500</span>g Dried Black-Eyed Peas or White Koki Cowpeas</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="350">350</span>ml Warm water (for blending)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="250">250</span>ml Unrefined Red Palm Oil (gently warmed)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="3">3</span> Whole Scotch bonnet peppers</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="1.5">1.5</span> tsp Fine sea salt</label></li>
+              <li><label><input type="checkbox"> Fresh Banana leaves (passed over flame until supple)</label></li>
+              <li><label><input type="checkbox"> Kitchen twine or banana leaf fiber for tying</label></li>
+            </ul>
+          </div>
+
+          <div class="col-steps">
+            <h3 class="col-title">👨‍🍳 Step-by-Step Cooking Guide</h3>
+            <ol class="step-list">
+              <li>
+                <strong>De-hull the Peas:</strong> Soak peas for 25 minutes. Rub between palms to loosen skins, rinse thoroughly until only pristine white beans remain.
+              </li>
+              <li>
+                <strong>Whip to a Light Mousse:</strong> Puree white beans with warm water until velvety. Whisk vigorously for 8-10 minutes to incorporate air for a fluffy crumb.
+              </li>
+              <li>
+                <strong>Warm Palm Oil Emulsion:</strong> Pour warm palm oil slowly into whipped batter while stirring. The white batter instantly turns dazzling sunset-orange. Dissolve salt and fold in.
+              </li>
+              <li>
+                <strong>Wrap &amp; Long-Steam:</strong> Ladle 1.5 cups batter into double-layered softened banana leaves with a scotch bonnet. Tie tightly and steam for 2 to 2.5 hours on a rack over boiling water.
+                <button class="timer-btn" data-time="7200">⏱ 2 Hour Steaming Timer</button>
+              </li>
+            </ol>
+
+            <div class="pro-tip-box">
+              <span class="pro-tip-badge">💡 Chef's Secret</span>
+              <p>Always use <strong>lukewarm water</strong> when blending. Cold water causes the warm palm oil to congeal into specks, preventing the smooth golden emulsion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Recipe 4: O'kok -->
+    <article class="recipe-card" id="recipe-okok" data-dish="okok" data-ingredients="okok gnetum peanuts groundnuts palm oil sugar salt smoked fish">
+      <div class="card-header">
+        <div class="dish-badge">Centre &amp; South Regions • Beti &amp; Ewondo Tradition</div>
+        <h2 class="dish-title">🍃 O'kok (Finely Sliced Forest Leaves with Peanuts &amp; Palm Oil)</h2>
+        <p class="dish-desc">An extraordinary sweet-and-savory masterpiece of Central Cameroon. Micro-shredded wild Okok leaves simmered slowly in rich roasted peanut butter, fragrant palm nut pulp, with a delicate balance of cane sugar and sea salt.</p>
+        
+        <div class="meta-strip">
+          <div class="meta-item"><span class="meta-label">Difficulty:</span> <span class="meta-val">Medium</span></div>
+          <div class="meta-item"><span class="meta-label">Prep Time:</span> <span class="meta-val">40 mins</span></div>
+          <div class="meta-item"><span class="meta-label">Cook Time:</span> <span class="meta-val">1h 15m</span></div>
+          <div class="meta-item"><span class="meta-label">Signature Pair:</span> <span class="meta-val">Bobolo or Miondo (Fermented Cassava)</span></div>
+        </div>
+
+        <div class="portion-calculator">
+          <label>Adjust Servings:</label>
+          <div class="servings-control">
+            <button class="serv-btn minus" data-target="okok">-</button>
+            <span class="serv-count" id="serv-count-okok" data-base="6">6</span>
+            <button class="serv-btn plus" data-target="okok">+</button>
+          </div>
+          <span class="portion-hint">(Ingredients automatically scale!)</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="recipe-split">
+          <div class="col-ingredients">
+            <h3 class="col-title">🛒 Ingredients (Interactive Checklist)</h3>
+            <ul class="ingredient-list" id="ing-list-okok">
+              <li><label><input type="checkbox"> <span class="qty" data-base="500">500</span>g Okok leaves (<em>Gnetum africanum</em>), razor-thin shredded</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="400">400</span>g Roasted peanuts (groundnuts), peeled &amp; pureed</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="250">250</span>ml Concentrated Palm nut pulp or Red Palm Oil</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="4">4</span> tbsp Granulated sugar (adjust to taste)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="1">1</span> tsp Fine sea salt</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="200">200</span>g Smoked catfish, flaked (optional traditional touch)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="1">1</span> Whole scotch bonnet pepper for gentle aroma</label></li>
+            </ul>
+          </div>
+
+          <div class="col-steps">
+            <h3 class="col-title">👨‍🍳 Step-by-Step Cooking Guide</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Roast &amp; Puree Peanuts:</strong> Roast raw groundnuts until fragrant and golden. Rub off skins, then blend with 200ml warm water into smooth peanut butter.
+              </li>
+              <li>
+                <strong>Parboil Okok Ribbons:</strong> Boil shredded Okok leaves with 500ml water and 1/2 tsp salt for 25 minutes until tender and water is absorbed.
+              </li>
+              <li>
+                <strong>Add Palm Nut Pulp / Oil:</strong> Pour palm pulp over the leaves and simmer for 15 minutes over medium-low heat.
+              </li>
+              <li>
+                <strong>The Nutty Sweet Simmer:</strong> Stir in roasted peanut paste, sugar, and salt. Simmer gently on low heat for 20-25 minutes, stirring continuously from the bottom so the peanut sauce develops its signature sweet-savory amber glaze.
+                <button class="timer-btn" data-time="1500">⏱ 25 Min Simmer Timer</button>
+              </li>
+            </ol>
+
+            <div class="pro-tip-box">
+              <span class="pro-tip-badge">💡 Perfect Harmony</span>
+              <p>The sour tang of fermented cassava batons (<strong>Bobolo / Miondo</strong>) cuts through the rich, sweet peanut and palm oil sauce in a pairing made in culinary heaven.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Recipe 5: Ndolé -->
+    <article class="recipe-card" id="recipe-ndole" data-dish="ndole" data-ingredients="ndole bitterleaf peanuts groundnuts beef canda smoked fish prawns shrimp crayfish garlic ginger onions">
+      <div class="card-header">
+        <div class="dish-badge">Littoral Region • Sawa &amp; Duala Heritage • National Dish</div>
+        <h2 class="dish-title">👑 Ndolé (Cameroon's National Dish: Bitterleaf, Peanut &amp; Royal Prawns)</h2>
+        <p class="dish-desc">The undisputed crowning glory of Cameroonian cuisine. Washed bitterleaves simmered in a velvety white puree of peeled raw peanuts, garlic, and ginger with tender meats and smoked fish, crowned with a dramatic pour of sizzling hot caramelized onions and juicy king prawns.</p>
+        
+        <div class="meta-strip">
+          <div class="meta-item"><span class="meta-label">Difficulty:</span> <span class="meta-val">Advanced</span></div>
+          <div class="meta-item"><span class="meta-label">Prep Time:</span> <span class="meta-val">1 hour</span></div>
+          <div class="meta-item"><span class="meta-label">Cook Time:</span> <span class="meta-val">1h 30m</span></div>
+          <div class="meta-item"><span class="meta-label">Supreme Pairing:</span> <span class="meta-val">Fried Ripe Plantains (Misi/Dodo)</span></div>
+        </div>
+
+        <div class="portion-calculator">
+          <label>Adjust Servings:</label>
+          <div class="servings-control">
+            <button class="serv-btn minus" data-target="ndole">-</button>
+            <span class="serv-count" id="serv-count-ndole" data-base="8">8</span>
+            <button class="serv-btn plus" data-target="ndole">+</button>
+          </div>
+          <span class="portion-hint">(Ingredients automatically scale!)</span>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="recipe-split">
+          <div class="col-ingredients">
+            <h3 class="col-title">🛒 Ingredients (Interactive Checklist)</h3>
+            <ul class="ingredient-list" id="ing-list-ndole">
+              <li><label><input type="checkbox"> <span class="qty" data-base="500">500</span>g Bitterleaves (Ndolé), thoroughly washed &amp; drained</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="500">500</span>g Raw Peanuts (boiled 10m &amp; peeled white)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="600">600</span>g Stewing beef chuck, diced</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="300">300</span>g Boiled canda (cow skin), bite-sized</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="200">200</span>g Smoked fish or stockfish, deboned</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="100">100</span>g Ground dried crayfish</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="400">400</span>g Fresh King Prawns / Tiger Shrimp, peeled</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="2">2</span> Onions, 5 Garlic cloves &amp; 3cm Ginger (for paste)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="1">1</span> Large Red onion (sliced into rings for garnish)</label></li>
+              <li><label><input type="checkbox"> <span class="qty" data-base="100">100</span>ml Pure vegetable oil for sizzling garnish</label></li>
+            </ul>
+          </div>
+
+          <div class="col-steps">
+            <h3 class="col-title">👨‍🍳 Step-by-Step Cooking Guide</h3>
+            <ol class="step-list">
+              <li>
+                <strong>Velvet Peanut Puree:</strong> Boil raw peanuts for 10 minutes to slip off skins. Blend white kernels with onions, garlic, ginger, and 200ml water until silky white.
+              </li>
+              <li>
+                <strong>Simmer Meats &amp; Seafood:</strong> Stew beef and canda with seasoning for 35 minutes until fork-tender. Add smoked fish and half the crayfish.
+              </li>
+              <li>
+                <strong>Cook Peanut Cream:</strong> Pour the white peanut puree into the simmering meat pot. Stir gently over low heat for 25 minutes until rich peanut oils rise.
+              </li>
+              <li>
+                <strong>Fold in Bitterleaves:</strong> Loosen washed bitterleaf balls, fold into peanut cream with remaining crayfish, and simmer for 15 minutes.
+              </li>
+              <li>
+                <strong>The Sizzling Garniture:</strong> Sauté red onion rings in hot oil until golden; toss in prawns for 3 minutes until pink. Pour sizzling hot oil, sweet onions, and prawns directly over the Ndolé pot!
+                <button class="timer-btn" data-time="180">⏱ 3 Min Prawn Sizzle</button>
+              </li>
+            </ol>
+
+            <div class="pro-tip-box">
+              <span class="pro-tip-badge">👑 Royal Presentation</span>
+              <p>The dramatic tableside pour of sizzling hot oil, caramelized onions, and pink shrimp creates the signature aroma and irresistible golden crown of authentic Duala Ndolé.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Interactive Timer Float -->
+  <div class="active-timer-float" id="timer-modal" style="display: none;">
+    <div class="timer-header">
+      <span class="timer-title" id="timer-title">Cooking Timer</span>
+      <button class="timer-close-btn" id="timer-close">&times;</button>
+    </div>
+    <div class="timer-display" id="timer-display">00:00</div>
+    <div class="timer-controls">
+      <button class="btn btn-sm btn-primary" id="timer-toggle">Pause</button>
+      <button class="btn btn-sm btn-secondary" id="timer-reset">Reset</button>
+    </div>
+  </div>
+
+  <!-- Git Bash Guide Modal -->
+  <div class="modal" id="git-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>🚀 Git Bash Quickstart &amp; Deployment Guide</h3>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>You can run this recipe book directly inside <strong>Git Bash</strong> on Windows or any Bash terminal.</p>
+        
+        <h4>1. Launch the Interactive Terminal Book:</h4>
+        <pre><code>bash recipe_book.sh
+# Or view a specific recipe:
+bash recipe_book.sh --eru
+bash recipe_book.sh --ndole</code></pre>
+
+        <h4>2. Run Automated Git Deployment:</h4>
+        <pre><code>bash deploy.sh</code></pre>
+        <p>The deployment script handles git repository initialization, commit generation, local web server hosting, and GitHub / GitHub Pages push!</p>
+
+        <h4>3. Direct Push to GitHub:</h4>
+        <pre><code>git remote add origin https://github.com/YOUR_USERNAME/african-recipe-book.git
+git branch -M main
+git push -u origin main</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>African Culinary Treasures • 5 Traditional Cameroonian Recipes</p>
+      <p class="footer-sub">Crafted for Git Bash, Modern Browsers &amp; Culinary Explorers Worldwide.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

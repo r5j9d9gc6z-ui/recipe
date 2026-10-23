@@ -1,0 +1,718 @@
+/* ==============================================================================
+   AFRICAN CULINARY TREASURES: STYLESHEET
+   Rich African Palette: Terracotta, Palm Gold, Forest Green, Slate Charcoal
+   ============================================================================== */
+
+:root {
+  --primary: #D35400;       /* Terracotta / Palm Oil Orange */
+  --primary-hover: #BA4A00;
+  --secondary: #27AE60;     /* Fresh Forest Green */
+  --secondary-dark: #1E8449;
+  --gold: #F39C12;          /* Cameroon Ochre / Sun Gold */
+  --gold-light: #FAD7A0;
+  --dark-bg: #111416;       /* Deep Charcoal */
+  --card-bg: #1A1F23;       /* Card Slate */
+  --card-border: #2B333A;
+  --text-main: #F4F6F7;
+  --text-muted: #95A5A6;
+  --accent-red: #C0392B;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==============================================================================
+   HERO HEADER
+   ============================================================================== */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1C0F0A 0%, #1A251E 50%, #111416 100%);
+  padding: 70px 0 50px 0;
+  border-bottom: 2px solid var(--primary);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 20%, rgba(211, 84, 0, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: rgba(243, 156, 18, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+}
+
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #FFFFFF, var(--gold-light), #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 780px;
+  margin: 0 auto 30px auto;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.quick-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.stat-num {
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* ==============================================================================
+   BUTTONS
+   ============================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(211, 84, 0, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-dark);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--card-border);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--text-main);
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+}
+
+/* ==============================================================================
+   STICKY FILTER / SEARCH NAV
+   ============================================================================== */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(17, 20, 22, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--card-border);
+  padding: 14px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-muted);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  color: #FFFFFF;
+  border-color: var(--gold);
+}
+
+.tab-btn.active {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+}
+
+.search-box {
+  position: relative;
+  min-width: 280px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 14px 8px 36px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* ==============================================================================
+   RECIPE CARDS
+   ============================================================================== */
+.main-content {
+  padding: 40px 24px 80px 24px;
+}
+
+.recipe-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 48px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.recipe-card:hover {
+  border-color: rgba(243, 156, 18, 0.4);
+}
+
+.card-header {
+  padding: 32px 36px 24px 36px;
+  border-bottom: 1px solid var(--card-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+}
+
+.dish-badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.dish-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.dish-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  max-width: 900px;
+}
+
+.meta-strip {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 14px 18px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-sm);
+  margin-bottom: 18px;
+}
+
+.meta-item {
+  font-size: 0.9rem;
+}
+
+.meta-label {
+  color: var(--text-muted);
+  margin-right: 6px;
+}
+
+.meta-val {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* Portion Calculator */
+.portion-calculator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.portion-calculator label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.servings-control {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.serv-btn {
+  background: transparent;
+  color: #FFFFFF;
+  border: none;
+  width: 32px;
+  height: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.serv-btn:hover {
+  background: var(--primary);
+}
+
+.serv-count {
+  padding: 0 12px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.portion-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Card Body Split */
+.card-body {
+  padding: 36px;
+}
+
+.recipe-split {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 40px;
+}
+
+.col-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Ingredient List */
+.ingredient-list {
+  list-style: none;
+}
+
+.ingredient-list li {
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.ingredient-list li:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ingredient-list label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  user-select: none;
+}
+
+.ingredient-list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--secondary);
+  cursor: pointer;
+}
+
+.ingredient-list input[type="checkbox"]:checked + span,
+.ingredient-list li.checked label {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.qty {
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* Steps List */
+.step-list {
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.step-list li {
+  margin-bottom: 18px;
+  font-size: 0.98rem;
+  color: #E0E0E0;
+  line-height: 1.6;
+}
+
+.step-list li strong {
+  color: #FFFFFF;
+}
+
+.timer-btn {
+  display: inline-block;
+  margin-top: 8px;
+  background: rgba(243, 156, 18, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(243, 156, 18, 0.3);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timer-btn:hover {
+  background: var(--gold);
+  color: #000000;
+}
+
+/* Pro Tip Box */
+.pro-tip-box {
+  background: rgba(39, 174, 96, 0.08);
+  border-left: 4px solid var(--secondary);
+  padding: 16px 20px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-top: 25px;
+}
+
+.pro-tip-badge {
+  display: inline-block;
+  font-weight: 700;
+  color: var(--secondary);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.pro-tip-box p {
+  font-size: 0.92rem;
+  color: #D5DBDB;
+}
+
+/* ==============================================================================
+   TIMER FLOATING WIDGET
+   ============================================================================== */
+.active-timer-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 240px;
+  background: #1C2329;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  text-align: center;
+}
+
+.timer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.timer-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.timer-close-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.timer-display {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* ==============================================================================
+   MODAL
+   ============================================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  max-width: 600px;
+  width: 90%;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 12px;
+}
+
+.modal-header h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-body h4 {
+  color: #FFFFFF;
+  margin: 16px 0 8px 0;
+  font-size: 0.95rem;
+}
+
+.modal-body pre {
+  background: #0E1113;
+  padding: 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+  border: 1px solid #222;
+  margin-bottom: 10px;
+}
+
+.modal-body code {
+  color: #A3E4D7;
+  font-family: 'Consolas', 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+
+/* ==============================================================================
+   FOOTER
+   ============================================================================== */
+.footer {
+  border-top: 1px solid var(--card-border);
+  padding: 35px 0;
+  text-align: center;
+  background: #0D1012;
+}
+
+.footer-content p {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.footer-sub {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* ==============================================================================
+   PRINT STYLES (Booklet Ready)
+   ============================================================================== */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .hero, .sticky-nav, .hero-actions, .timer-btn, .portion-calculator, .active-timer-float, .footer {
+    display: none !important;
+  }
+
+  .recipe-card {
+    page-break-after: always;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    color: #000000 !important;
+  }
+
+  .dish-title {
+    color: #000000 !important;
+    font-size: 1.8rem;
+  }
+
+  .meta-strip {
+    background: #EEEEEE !important;
+    color: #000000 !important;
+  }
+
+  .meta-label, .meta-val, .dish-desc, .step-list li {
+    color: #000000 !important;
+  }
+
+  .col-title {
+    color: #000000 !important;
+    border-bottom: 2px solid #000000;
+  }
+
+  .ingredient-list li {
+    background: transparent !important;
+    color: #000000 !important;
+    border-bottom: 1px solid #CCC;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .recipe-split {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .card-header, .card-body {
+    padding: 24px;
+  }
+}
